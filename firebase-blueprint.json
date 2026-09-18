@@ -1,0 +1,121 @@
+{
+  "entities": {
+    "clients": {
+      "title": "Client",
+      "description": "Base de clientes da Cacique Logística",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "farm": { "type": "string" },
+        "base": { "type": "string" },
+        "regional": { "type": "string" },
+        "territory": { "type": "string" },
+        "territoryCode": { "type": "string" },
+        "externalSeller": { "type": "string" },
+        "businessType": { "type": "string" },
+        "poloNumber": { "type": "string" },
+        "poloName": { "type": "string" },
+        "paymentTerm": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "contact1": { "type": "string" },
+        "contact1Name": { "type": "string" },
+        "contact1Role": { "type": "string" },
+        "contact1Ddd": { "type": "string" },
+        "contact1Number": { "type": "string" },
+        "contact2": { "type": "string" },
+        "contact2Name": { "type": "string" },
+        "contact2Role": { "type": "string" },
+        "contact2Ddd": { "type": "string" },
+        "contact2Number": { "type": "string" },
+        "contact3": { "type": "string" },
+        "contact3Name": { "type": "string" },
+        "contact3Role": { "type": "string" },
+        "contact3Ddd": { "type": "string" },
+        "contact3Number": { "type": "string" },
+        "source": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "code", "name"]
+    },
+    "calls": {
+      "title": "CallRecord",
+      "description": "Registro de ligações efetuadas para clientes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "clientId": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "operatorId": { "type": "string" },
+        "operatorName": { "type": "string" },
+        "notes": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "clientId", "date", "operatorId", "status"]
+    },
+    "operators": {
+      "title": "Operator",
+      "description": "Usuários e operadores cadastrados no sistema",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "avatarColor": { "type": "string" },
+        "email": { "type": "string" },
+        "isAdmin": { "type": "boolean" },
+        "permissionMode": { "type": "string" },
+        "allowedTabs": { "type": "array", "items": { "type": "string" } },
+        "assignedTerritories": { "type": "array", "items": { "type": "string" } },
+        "assignedRegionais": { "type": "array", "items": { "type": "string" } },
+        "password": { "type": "string" },
+        "passwordDefined": { "type": "boolean" },
+        "mustChangePassword": { "type": "boolean" }
+      },
+      "required": ["id", "name", "role", "permissionMode"]
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Configurações globais do sistema Cacique",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "uncalledAlertDays": { "type": "number" },
+        "whatsappTemplate": { "type": "string" },
+        "soundEnabled": { "type": "boolean" },
+        "copyFeedbackDuration": { "type": "number" },
+        "activeOperatorId": { "type": "string" }
+      },
+      "required": ["uncalledAlertDays"]
+    },
+    "territories": {
+      "title": "Territory",
+      "description": "Territórios cadastrados ou importados",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "regional": { "type": "string" },
+        "externalSeller": { "type": "string" }
+      },
+      "required": ["id", "name", "regional"]
+    },
+    "regionais": {
+      "title": "Regional",
+      "description": "Regionais cadastradas",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "state": { "type": "string" }
+      },
+      "required": ["id", "name", "state"]
+    }
+  }
+}

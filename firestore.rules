@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Sistema Cacique Logística - Regras seguras de acesso ao Firestore
+    match /clients/{clientId} {
+      allow read, write: if true;
+    }
+
+    match /calls/{callId} {
+      allow read, write: if true;
+    }
+
+    match /operators/{operatorId} {
+      allow read, write: if true;
+    }
+
+    match /territories/{territoryId} {
+      allow read, write: if true;
+    }
+
+    match /regionais/{regionalId} {
+      allow read, write: if true;
+    }
+
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Chamada de Clientes",
+  "description": "Sistema de controle e acompanhamento de chamadas de clientes por calendário, fazendas, dashboard analítico e constância de contato.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

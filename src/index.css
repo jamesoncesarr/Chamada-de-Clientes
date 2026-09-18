@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom smooth horizontal scrollbar for calendar */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* =========================================================================
+   DARK MODE THEME SYSTEM (NEXO / Deep Navy Slate Palette)
+   Applies only when user is logged in and dark mode is active.
+   Never touches or alters the Login Screen.
+   ========================================================================= */
+html.dark,
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #0a0e17;
+  color: #f1f5f9;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #080c14;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1c283e;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2a3b5c;
+}
+
+/* Surface backgrounds */
+.dark .bg-white {
+  background-color: #101726 !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0d1320 !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #131b2c !important;
+}
+
+.dark .bg-slate-100\/90,
+.dark .bg-slate-100\/80,
+.dark .bg-slate-100\/70 {
+  background-color: #131b2c !important;
+}
+
+.dark .bg-slate-200 {
+  background-color: #192338 !important;
+}
+
+.dark .bg-slate-800 {
+  background-color: #101726 !important;
+}
+
+.dark .bg-slate-900 {
+  background-color: #080c14 !important;
+}
+
+/* Subtle backgrounds & pills */
+.dark .bg-blue-50 {
+  background-color: #132247 !important;
+  color: #60a5fa !important;
+}
+
+.dark .bg-blue-100\/90,
+.dark .bg-blue-100 {
+  background-color: #132247 !important;
+  color: #60a5fa !important;
+}
+
+.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+}
+
+.dark .bg-rose-50 {
+  background-color: rgba(244, 63, 94, 0.12) !important;
+}
+
+.dark .bg-purple-50 {
+  background-color: rgba(168, 85, 247, 0.12) !important;
+}
+
+/* Border lines */
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-200\/90,
+.dark .border-slate-200\/80,
+.dark .border-slate-200\/70,
+.dark .border-slate-200\/60 {
+  border-color: #1a2336 !important;
+}
+
+.dark .border-slate-300 {
+  border-color: #1f2b42 !important;
+}
+
+.dark .border-blue-200\/60,
+.dark .border-blue-200 {
+  border-color: rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Text colors */
+.dark .text-slate-900 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-600 {
+  color: #8b9cb5 !important;
+}
+
+.dark .text-slate-500 {
+  color: #7d8ea5 !important;
+}
+
+.dark .text-slate-400 {
+  color: #5a6c85 !important;
+}
+
+/* Hover states */
+.dark .hover\:bg-slate-50:hover {
+  background-color: #162136 !important;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  background-color: #162136 !important;
+}
+
+.dark .hover\:text-slate-900:hover {
+  color: #ffffff !important;
+}
+
+.dark .hover\:border-slate-200:hover {
+  border-color: #26354f !important;
+}
+
+/* Gradient overrides in subheader banner */
+.dark .bg-gradient-to-b.from-blue-50\/80 {
+  background-image: linear-gradient(to bottom, #0e1424, #0b101c, #0a0e17) !important;
+}
+
+/* Inputs, Selects, and Textareas */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #0c101a !important;
+  color: #f1f5f9 !important;
+  border-color: #1c273c !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #50617a !important;
+}
+
+.dark select option {
+  background-color: #101726 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Table grid borders and cells */
+.dark th,
+.dark td {
+  border-color: #172133 !important;
+}
+
+.dark tbody tr:hover > td {
+  background-color: #162136 !important;
+}
+
+/* Modals & Dialogs */
+.dark .backdrop-blur-sm,
+.dark .fixed.inset-0.bg-slate-900\/50,
+.dark .fixed.inset-0.bg-black\/50,
+.dark .fixed.inset-0.bg-black\/60 {
+  background-color: rgba(4, 7, 13, 0.8) !important;
+}
+
+
